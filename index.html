@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Memento Mori: a life, month by month</title>
+        <meta
+            name="description"
+            content="A record of your months, kept one at a time. Your life as a grid of months, on Android: mark each one once, keep what made it worth remembering, and read a short reflection each week. No account, no ads, nothing leaves your phone." />
+        <meta name="author" content="Gabriel Santana" />
+        <meta name="theme-color" content="#F5F1E8" />
+        <meta name="color-scheme" content="light" />
+
+        <!--
+        PLACEHOLDER (absolute URLs): Open Graph and Twitter cards need absolute links. Replace
+        https://gabrielsanttana.github.io/mementomori/ with the real GitHub Pages address once
+        the portfolio repo is published. Everything else on the page uses relative paths.
+    -->
+        <link rel="canonical" href="https://gabrielsanttana.github.io/mementomori/" />
+        <link rel="alternate" hreflang="en" href="https://gabrielsanttana.github.io/mementomori/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://gabrielsanttana.github.io/mementomori/pt-br/" />
+        <link rel="alternate" hreflang="x-default" href="https://gabrielsanttana.github.io/mementomori/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="pt_BR" />
+        <meta property="og:site_name" content="Memento Mori" />
+        <meta property="og:title" content="Memento Mori: a life, month by month" />
+        <meta
+            property="og:description"
+            content="A record of your months, kept one at a time. Mark each month once. Keep what made it worth remembering." />
+        <meta property="og:url" content="https://gabrielsanttana.github.io/mementomori/" />
+        <meta property="og:image" content="https://gabrielsanttana.github.io/mementomori/assets/og-card.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="The Memento Mori wordmark and hourglass mark beside a life drawn as a grid of months." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Memento Mori: a life, month by month" />
+        <meta
+            name="twitter:description"
+            content="A record of your months, kept one at a time. Mark each month once. Keep what made it worth remembering." />
+        <meta name="twitter:image" content="https://gabrielsanttana.github.io/mementomori/assets/og-card.png" />
+
+        <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:wght@400;500&display=swap" />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <a class="skip-link label" href="#main">Skip to the page</a>
+
+        <header class="site-header">
+            <div class="wrap">
+                <a class="wordmark" href="./">Memento Mori</a>
+                <nav class="label" aria-label="Sections">
+                    <a class="nav-optional" href="#why">Why</a>
+                    <a class="nav-optional" href="#reflection">Reflection</a>
+                    <a class="nav-optional" href="#privacy">Privacy</a>
+                    <a class="is-accent" href="#install">Install</a>
+                </nav>
+                <nav class="lang-switch label" aria-label="Language">
+                    <a href="./" lang="en" hreflang="en" aria-current="page">EN</a>
+                    <a href="pt-br/" lang="pt-BR" hreflang="pt-BR" title="Português (Brasil)">PT</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ============================== Hero ============================== -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="wrap split">
+                    <div>
+                        <img class="hero-mark" src="assets/logo-mark.svg" width="40" height="68" alt="" />
+                        <p class="wordmark">Memento Mori</p>
+                        <p class="hero-gloss">
+                            <i>memento mori</i>: an old reminder to be mindful of time, so the present can come into
+                            focus.
+                        </p>
+                        <h1 class="display" id="hero-title">A life, month by month.</h1>
+                        <p class="lead">
+                            A record of your months, kept one at a time. Mark each month once. Keep what made it worth
+                            remembering.
+                        </p>
+
+                        <div class="hero-actions">
+                            <!--
+                            PLACEHOLDER URL: the APK download. The app source is private, so this
+                            must point at the Releases page of the public repo that hosts the APK.
+                        -->
+                            <a class="button" href="https://github.com/gabrielsanttana/mementomori/releases/latest"
+                                >Download the preview APK</a
+                            >
+                            <p class="caption hero-note">
+                                For Android 7.0 or newer. Free, with no account. Coming to Google Play; the preview
+                                installs alongside it, and your record can move over with you.
+                            </p>
+                        </div>
+                    </div>
+
+                    <figure class="hero-figure">
+                        <img
+                            src="assets/hero-grid.svg"
+                            width="515"
+                            height="387"
+                            alt="A life of ninety years drawn as 1,080 small squares, twelve to a row. The first thirty-six years are filled in sage, a few months are left pale, one square in oxblood marks the present, and the rest are outlined." />
+                        <figcaption class="label">Ninety years, 1,080 months. A fictional record.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ============================== Why "memento mori" ============================== -->
+            <section id="why" aria-labelledby="why-title">
+                <div class="wrap">
+                    <div class="text">
+                        <p class="label section-label">I · Why “memento mori”</p>
+                        <h2 class="headline" id="why-title">An old reminder, kept for the living.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            <i>Memento mori</i> is Latin for “remember that you will die”. It can sound grim at first,
+                            but it was never meant to frighten. It was a way to bring the present into focus. The idea
+                            is older than the phrase: Socrates, in Plato’s <i>Phaedo</i>, called philosophy a practice
+                            for dying, and the Stoics after him made it a daily exercise.
+                        </p>
+                    </div>
+
+                    <div class="split why-body">
+                        <div class="text stack">
+                            <p class="muted">
+                                Seneca, in his letters and in
+                                <i>On the Shortness of Life</i>, argued that life is long enough for anyone who knows
+                                how to use it. Marcus Aurelius returned to the thought again and again in the notebook
+                                we call the <i>Meditations</i>. Epictetus gave it to his students plainly:
+                            </p>
+
+                            <figure class="epigraph">
+                                <blockquote>
+                                    “Let death and exile and every other thing which appears dreadful be daily before
+                                    your eyes; but most of all death: and you will never think of anything mean nor will
+                                    you desire anything extravagantly.”
+                                </blockquote>
+                                <figcaption class="caption">
+                                    Epictetus · Encheiridion, 21 · Translation: George Long, 1877
+                                </figcaption>
+                            </figure>
+
+                            <p class="muted">
+                                The same thought lived on in Christian contemplation, where the psalm’s “So teach us to
+                                number our days” was read as a call to live well in the time given, and in the vanitas
+                                still lifes of the seventeenth century, which set an hourglass or a cut flower beside
+                                the good things on a table. Montaigne titled an essay
+                                <i>That to Study Philosophy Is to Learn to Die</i>, and hoped death would find him
+                                “planting my cabbages”.
+                            </p>
+
+                            <p class="title">
+                                Across all of it the point is the same: remembering that time ends is a way to value it,
+                                not to fear it.
+                            </p>
+
+                            <h3 class="label" style="padding-top: 16px">A life on one page</h3>
+                            <p class="muted">
+                                Counted in days, a life runs past thirty thousand. Counted in months, ninety years is
+                                1,080 squares: few enough to fit on a single screen and be seen whole. Life calendars
+                                such as Tim Urban’s “Your Life in Weeks” (Wait But Why, 2014) showed how much that one
+                                picture can say. Memento Mori draws it in months, so that each square is large enough to
+                                hold something: one mark, and a few words about what made the month worth remembering.
+                                Like the month itself, each one is written only once.
+                            </p>
+
+                            <!--
+                            OPTIONAL, for Gabriel: one or two sentences of your own on why you made this app.
+                            Leave it out if you prefer. For example:
+                            <p class="muted">…</p>
+                        --></div>
+
+                        <aside class="not-panel" aria-labelledby="not-title">
+                            <h3 class="label" id="not-title">What it is not</h3>
+                            <dl class="not-list">
+                                <div>
+                                    <dt>Not a countdown.</dt>
+                                    <dd>
+                                        Nothing ticks down, and nothing is predicted. The grid simply ends at the span
+                                        you choose.
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>Not a habit tracker.</dt>
+                                    <dd>No streaks, no scores, no goals to hit. A month asks for one mark, once.</dd>
+                                </div>
+                                <div>
+                                    <dt>Not built on guilt.</dt>
+                                    <dd>
+                                        A missed month is simply missed. It is never shamed, and it stays open for
+                                        whenever you are ready.
+                                    </dd>
+                                </div>
+                            </dl>
+                            <p class="not-closing">
+                                It is a quiet way to notice the time you are given, and to keep what made each month
+                                worth remembering.
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== The grid ============================== -->
+            <section id="grid" aria-labelledby="grid-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">II · The grid</p>
+                        <h2 class="headline" id="grid-title">Your life, drawn as months.</h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                One row for each year, twelve squares to a row. The grid begins at your birth and ends
+                                at the span you choose: ninety years unless you set another.
+                            </p>
+                            <p class="muted">
+                                Each square is one month of your life. One of them is always the month you are living
+                                now.
+                            </p>
+                        </div>
+                    </div>
+
+                    <dl class="legend" aria-label="What the squares mean">
+                        <div>
+                            <dt class="label">
+                                <span class="swatch swatch--remembered" aria-hidden="true"></span>Remembered
+                            </dt>
+                            <dd>
+                                A month you marked, with or without a note. The months before your record began are
+                                filled when you open it.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="label"><span class="swatch swatch--missed" aria-hidden="true"></span>Missed</dt>
+                            <dd>
+                                A past month left unmarked. It stays open; you can come back to it whenever you are
+                                ready.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="label">
+                                <span class="swatch swatch--this-month" aria-hidden="true"></span>This month
+                            </dt>
+                            <dd>The month you are in, waiting to be marked.</dd>
+                        </div>
+                        <div>
+                            <dt class="label"><span class="swatch swatch--future" aria-hidden="true"></span>Future</dt>
+                            <dd>The months still ahead. They do nothing when tapped.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- ============================== Marking a month ============================== -->
+            <section id="marking" aria-labelledby="marking-title">
+                <div class="wrap split split--figure-first">
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/month-check-in.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the check-in for October 2026: what made this month worth remembering, a short note on ruled lines, and the button to mark the month." />
+                            </div>
+                            <figcaption class="label">Marking this month</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="text">
+                        <p class="label section-label">III · Marking a month</p>
+                        <h2 class="headline" id="marking-title">Once a month, one mark.</h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                Open the square for the month you are in and answer a single question: what made this
+                                month worth remembering?
+                            </p>
+                            <p class="muted">
+                                Keep a short note, or mark the month without one. A note is optional. The month is not.
+                            </p>
+                            <h3 class="title" style="padding-top: 12px">Written once, as in ink.</h3>
+                            <p class="muted">
+                                A marked month can’t be edited afterwards, and that is the intention. Marking is meant
+                                to be done with care: you pause, choose what this month should be remembered for, and
+                                write it once, the way an entry goes into a ledger in ink. Knowing there is no second
+                                draft is what gives those few words their weight.
+                            </p>
+                            <p class="muted">
+                                What stays is what you chose to keep at the time, not a version polished later. Tap the
+                                square whenever you like to read it again, exactly as you wrote it.
+                            </p>
+                            <p class="title">Once marked, always marked.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Two views ============================== -->
+            <section id="views" aria-labelledby="views-title">
+                <div class="wrap views">
+                    <div class="text">
+                        <p class="label section-label">IV · Two views</p>
+                        <h2 class="headline" id="views-title">Read it by the year, or all at once.</h2>
+                        <div class="view-notes">
+                            <div>
+                                <h3 class="label">Years</h3>
+                                <p class="muted">
+                                    The board opens on your years, one row at a time, with the current year in sight and
+                                    a quiet tally beneath: remembered, missed, still ahead.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="label">Whole life</h3>
+                                <p class="muted">
+                                    Every year on one screen, without scrolling, under a single line that says where you
+                                    are, such as “Year 39 of 90”. Pinch in on the years view to get there, and tap a
+                                    year to open it.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shot-pair">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/years.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the years view for a fictional record: the title, the Years and Whole life switch, the legend, and rows of twelve months, one for each year." />
+                            </div>
+                            <figcaption class="label">Years</figcaption>
+                        </figure>
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/whole-life.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the whole life view for a fictional record: year 39 of 90, and all ninety years on one screen in two columns." />
+                            </div>
+                            <figcaption class="label">Whole life</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Reflection ============================== -->
+            <section id="reflection" aria-labelledby="reflection-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">V · The weekly reflection</p>
+                        <h2 class="headline" id="reflection-title">
+                            A few minutes for what gives the months their meaning.
+                        </h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                Fifty-three short texts, one for each week of the year, on time, attention and
+                                gratitude. Each one opens on a passage, carries a pull quote, and ends with a question
+                                to keep for the week.
+                            </p>
+                            <p class="authors">
+                                Seneca, Marcus Aurelius, Epictetus, Montaigne, Emerson, Thoreau, Whitman, Rilke, Tagore,
+                                Emily Dickinson, Tolstoy and others.
+                            </p>
+                            <p class="muted">Past weeks of the year stay in the archive, under Reflections.</p>
+                        </div>
+
+                        <article class="reflection-card" aria-label="An example reflection">
+                            <p class="label">Week 2</p>
+                            <h3 class="title" style="margin-top: 8px">The one thing that is ours</h3>
+                            <blockquote>“There is nothing we can properly call our own, but Time”</blockquote>
+                            <p class="caption" style="margin-top: 12px">
+                                Seneca · Moral Letters to Lucilius, 1 · Translation: Thomas Morell, 1786
+                            </p>
+                            <p class="prompt">What took your hours lately that you would not choose to give again?</p>
+                        </article>
+                    </div>
+
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/reflection.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the week 2 reflection: The one thing that is ours, after Seneca’s first letter to Lucilius." />
+                            </div>
+                            <figcaption class="label">A reflection</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Reminders ============================== -->
+            <section id="reminders" aria-labelledby="reminders-title">
+                <div class="wrap">
+                    <div class="text">
+                        <p class="label section-label">VI · Reminders</p>
+                        <h2 class="headline" id="reminders-title">Two quiet reminders, if you want them.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            If you allow notifications, the weekly one arrives on the day and at the time you choose,
+                            and the monthly one on the last day of each month, at the time you choose. Both are
+                            scheduled on the phone itself, and both can be turned off in Settings.
+                        </p>
+                    </div>
+
+                    <div class="reminders">
+                        <div class="reminder">
+                            <p class="when label">
+                                <img
+                                    class="reminder-mark"
+                                    src="assets/logo-mark.svg"
+                                    width="10"
+                                    height="17"
+                                    alt="" />Each week · your day, your time
+                            </p>
+                            <strong>The weekly reflection</strong>
+                            <p>A few minutes for what gives the months their meaning.</p>
+                        </div>
+                        <div class="reminder">
+                            <p class="when label">
+                                <img
+                                    class="reminder-mark"
+                                    src="assets/logo-mark.svg"
+                                    width="10"
+                                    height="17"
+                                    alt="" />Each month · the last day, your time
+                            </p>
+                            <strong>This month is closing</strong>
+                            <p>Mark what made it worth remembering.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Privacy ============================== -->
+            <section id="privacy" aria-labelledby="privacy-title">
+                <div class="wrap split split--figure-first">
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/settings.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the record screen in Settings: name, date of birth, grid span, and the reflection ritual with its reminders and times." />
+                            </div>
+                            <figcaption class="label">The record, in Settings</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="text">
+                        <p class="label section-label">VII · Private by design</p>
+                        <h2 class="headline" id="privacy-title">This record is yours.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            It stays on your phone, and the app never sends it anywhere. There is no server to send it
+                            to.
+                        </p>
+
+                        <ul class="nevers" aria-label="What the app does not have">
+                            <li>No account</li>
+                            <li>No sign-in</li>
+                            <li>No sync</li>
+                            <li>No analytics</li>
+                            <li>No ads</li>
+                        </ul>
+
+                        <div class="facts">
+                            <div>
+                                <h3>A new phone</h3>
+                                <p class="muted">
+                                    Your record is part of Android’s own backup, so setting up a new phone from that
+                                    backup brings your months with it.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>A copy of your own</h3>
+                                <p class="muted">
+                                    Export my archive gives you a plain file of every month and note. Keep it anywhere,
+                                    and use Restore from a file to bring it back.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Gone when you say so</h3>
+                                <p class="muted">
+                                    Erase this device removes every month and every note at once. Uninstalling the app
+                                    removes them too.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="caption" style="margin-top: 28px">
+                            The full
+                            <a href="https://gist.github.com/gabrielsanttana/80c33d4d604d0b20329192adfdc450f5"
+                                >privacy policy</a
+                            >
+                            is short, and says the same.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Install ============================== -->
+            <section id="install" aria-labelledby="install-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">VIII · Install the preview</p>
+                        <h2 class="headline" id="install-title">Until it reaches Google Play.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            Memento Mori is on its way to Google Play. Meanwhile, a preview build is shared as an APK
+                            file. It needs Android 7.0 or newer.
+                        </p>
+
+                        <ol class="steps">
+                            <li>
+                                <div>
+                                    On your Android phone, open the
+                                    <a href="https://github.com/gabrielsanttana/mementomori/releases/latest"
+                                        >latest release</a
+                                    >
+                                    and download the file ending in <code>.apk</code>.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Open the downloaded file. Android will ask to allow installs from this source: turn
+                                    on <strong>Allow from this source</strong> for your browser or file manager, then go
+                                    back.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Tap <strong>Install</strong>. Google Play Protect may ask you to confirm an app it
+                                    has not seen before.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Open <strong>Memento Mori Preview</strong>, enter your name and date of birth, and
+                                    begin. The date of birth is set once and can’t be changed later.
+                                </div>
+                            </li>
+                        </ol>
+
+                        <p class="caption" style="margin-top: 20px">
+                            The preview is its own app (<code>com.gabriel.mementomori.preview</code>), so it can sit
+                            beside the Google Play version when that arrives.
+                        </p>
+                    </div>
+
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="assets/screenshots/welcome.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="A mock-up of the welcome screen: the hourglass mark, the wordmark, “A life, month by month.” and the Begin button." />
+                            </div>
+                            <figcaption class="label">The first screen</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Questions ============================== -->
+            <section id="questions" aria-labelledby="questions-title">
+                <div class="wrap">
+                    <p class="label section-label">IX · Questions</p>
+                    <h2 class="headline" id="questions-title">Asked so far.</h2>
+
+                    <dl class="faq">
+                        <div>
+                            <dt>Is there a version for iPhone?</dt>
+                            <dd>Not yet. The first version is for Android only.</dd>
+                        </div>
+                        <div>
+                            <dt>Where is my record kept?</dt>
+                            <dd>
+                                Only on your phone, in a local database: your name, your date of birth, your grid span,
+                                your reminder choices, and every month you mark with its note. Nothing is collected,
+                                sold, shared or analysed.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>What happens when I change phones?</dt>
+                            <dd>
+                                If your phone’s backup is on, setting up the new phone from it brings your months along.
+                                To move by hand, use Export my archive in Settings, then Restore from a file on the new
+                                phone’s welcome screen.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>How do I move from the preview to the Google Play version?</dt>
+                            <dd>
+                                The two are separate apps and can be installed side by side. In the preview, use Export
+                                my archive. Install Memento Mori from Google Play and choose Restore from a file. Once
+                                your months are there, the preview can be uninstalled.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Can I change a month after marking it?</dt>
+                            <dd>
+                                No, and by design. A month is marked once, like an entry written in ink: what stays is
+                                what you chose to remember at the time. You can open it whenever you like and read it
+                                exactly as you wrote it.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>What if I forget a month?</dt>
+                            <dd>
+                                It turns Missed, and it stays open. You can come back and mark it whenever you are
+                                ready; it is never too late to remember.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Is the app in other languages?</dt>
+                            <dd>
+                                Yes. It speaks English and Portuguese: the language is chosen the first time it opens
+                                and can be changed later in Settings. The reflections have a Portuguese edition too.
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <div class="stack-tight">
+                    <div class="footer-brand">
+                        <img src="assets/logo-mark.svg" width="18" height="31" alt="" />
+                        <span class="wordmark">Memento Mori</span>
+                    </div>
+                    <p class="caption">Est. for the present moment.</p>
+                </div>
+
+                <ul class="footer-links">
+                    <li>
+                        <a href="https://gist.github.com/gabrielsanttana/80c33d4d604d0b20329192adfdc450f5"
+                            >Privacy policy</a
+                        >
+                    </li>
+                    <li><a href="mailto:santana.sw.solutions@gmail.com">santana.sw.solutions@gmail.com</a></li>
+                    <li>
+                        <a href="https://github.com/gabrielsanttana/mementomori/releases/latest">Preview releases</a>
+                    </li>
+                </ul>
+
+                <p class="caption colophon">
+                    A personal project by Gabriel Santana. Built with Expo and React Native in TypeScript, with SQLite
+                    through Drizzle; everything runs on the phone.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>

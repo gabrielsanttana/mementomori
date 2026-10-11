@@ -1,0 +1,848 @@
+/* Memento Mori: presentation page. "Quiet Archive" (DESIGN.md §2–§4): one paper background,
+   1px hairlines, radius 0, no shadows or gradients, Cormorant Garamond over Source Sans 3. */
+
+:root {
+    color-scheme: light;
+    --paper: #f5f1e8;
+    --ink: #181713;
+    --ink-muted: #5c504a;
+    --ink-faint: #7a6860;
+    --rule: #d1cab9;
+    --sage: #68705a;
+    --oxblood: #772d2a;
+
+    --serif: 'Cormorant Garamond', 'Iowan Old Style', Georgia, serif;
+    --sans: 'Source Sans 3', 'Segoe UI', system-ui, sans-serif;
+
+    --gutter: 16px;
+    --measure: 34rem;
+    --page: 70rem;
+    --section-space: 72px;
+}
+
+@media (min-width: 640px) {
+    :root {
+        --gutter: 32px;
+        --section-space: 104px;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --gutter: 48px;
+        --section-space: 128px;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--oxblood);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    text-decoration-color: var(--rule);
+}
+
+:focus-visible {
+    outline: 2px solid var(--oxblood);
+    outline-offset: 3px;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+dl,
+dd,
+figure,
+blockquote {
+    margin: 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: var(--gutter);
+    top: -100px;
+    background: var(--paper);
+    padding: 8px 12px;
+    border: 1px solid var(--rule);
+}
+
+.skip-link:focus {
+    top: 8px;
+}
+
+/* ---------- Type roles ---------- */
+
+.wordmark {
+    font-family: var(--serif);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.24em;
+}
+
+.label {
+    font-family: var(--sans);
+    font-size: 12px;
+    line-height: 1.5;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--ink-faint);
+}
+
+.display {
+    font-family: var(--serif);
+    text-wrap: balance;
+    font-weight: 400;
+    font-size: clamp(2.6rem, 7vw, 4.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+}
+
+.headline {
+    font-family: var(--serif);
+    text-wrap: balance;
+    font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.14;
+    letter-spacing: -0.01em;
+}
+
+.title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.25;
+}
+
+.lead {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--ink-muted);
+}
+
+.muted {
+    color: var(--ink-muted);
+}
+
+.caption {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--ink-faint);
+}
+
+/* ---------- Layout ---------- */
+
+.wrap {
+    width: 100%;
+    max-width: calc(var(--page) + 2 * var(--gutter));
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+.site-header {
+    border-bottom: 1px solid var(--rule);
+}
+
+.site-header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 56px;
+}
+
+.site-header .wordmark {
+    font-size: 13px;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 20px;
+}
+
+.site-header .wordmark {
+    margin-right: auto;
+}
+
+/* EN · PT, drawn like the app's view switch: the current language in oxblood with its 6 × 6 mark. */
+.site-header .lang-switch {
+    gap: 12px;
+    padding: 6px 10px;
+    border: 1px solid var(--rule);
+}
+
+.lang-switch a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--ink-faint);
+    text-decoration: none;
+}
+
+.lang-switch a::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: transparent;
+}
+
+.lang-switch a[aria-current='page'] {
+    color: var(--oxblood);
+}
+
+.lang-switch a[aria-current='page']::before {
+    background: var(--oxblood);
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: var(--ink-faint);
+}
+
+.site-header nav a:hover {
+    color: var(--oxblood);
+}
+
+.site-header nav .is-accent {
+    color: var(--oxblood);
+}
+
+.nav-optional {
+    display: none;
+}
+
+@media (min-width: 720px) {
+    .nav-optional {
+        display: inline;
+    }
+}
+
+section {
+    padding: var(--section-space) 0;
+    border-top: 1px solid var(--rule);
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.section-label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--oxblood);
+    flex: none;
+}
+
+.stack > * + * {
+    margin-top: 20px;
+}
+
+.stack-tight > * + * {
+    margin-top: 12px;
+}
+
+.text {
+    max-width: var(--measure);
+}
+
+/* Two columns from tablet up: text beside its figures. */
+.split {
+    display: grid;
+    gap: 48px;
+}
+
+@media (min-width: 880px) {
+    .split {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 64px;
+        align-items: start;
+    }
+}
+
+/* Figure-first sections put the figure on the left on wide screens, after the text on phones. */
+@media (max-width: 879px) {
+    .split--figure-first > :first-child {
+        order: 2;
+    }
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    padding: 56px 0 var(--section-space);
+    border-top: 0;
+}
+
+.hero .split {
+    align-items: center;
+}
+
+.hero-mark {
+    width: 40px;
+    height: auto;
+}
+
+.hero .wordmark {
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    letter-spacing: 0.22em;
+    line-height: 1.2;
+    margin-top: 20px;
+}
+
+.hero .display {
+    margin-top: 40px;
+}
+
+.hero .lead {
+    margin-top: 20px;
+    max-width: 30rem;
+}
+
+.hero-actions {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    background: var(--sage);
+    color: var(--paper);
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+}
+
+.button:hover {
+    opacity: 0.85;
+    text-decoration: none;
+}
+
+@media (max-width: 479px) {
+    .button {
+        width: 100%;
+    }
+}
+
+.hero-note {
+    max-width: 30rem;
+}
+
+.hero-figure {
+    border: 1px solid var(--rule);
+    padding: clamp(20px, 5vw, 44px);
+}
+
+.hero-figure img {
+    width: 100%;
+}
+
+.hero-figure figcaption {
+    margin-top: 20px;
+}
+
+.hero-motto {
+    margin-top: 48px;
+}
+
+/* ---------- The grid legend ---------- */
+
+.legend {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--rule);
+    margin-top: 32px;
+}
+
+.legend > div {
+    padding: 18px 20px;
+    border-top: 1px solid var(--rule);
+}
+
+.legend > div:first-child {
+    border-top: 0;
+}
+
+.legend dt {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.legend dd {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-muted);
+    margin: 6px 0 0 28px;
+}
+
+.swatch {
+    width: 14px;
+    height: 14px;
+    flex: none;
+}
+
+.swatch--remembered {
+    background: var(--sage);
+}
+
+.swatch--missed {
+    background: var(--rule);
+}
+
+.swatch--this-month {
+    background: var(--oxblood);
+    position: relative;
+}
+
+.swatch--this-month::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    background: var(--paper);
+}
+
+.swatch--future {
+    border: 1px solid var(--rule);
+}
+
+/* ---------- Screenshot frames (1080 × 2340) ---------- */
+
+.shot {
+    width: 100%;
+    max-width: 280px;
+}
+
+.shot-frame {
+    border: 1px solid var(--rule);
+    padding: 8px;
+}
+
+.shot img {
+    width: 100%;
+    aspect-ratio: 1080 / 2340;
+    object-fit: cover;
+    background: var(--paper);
+    outline: 1px solid var(--rule);
+    outline-offset: -1px;
+}
+
+.shot figcaption {
+    margin-top: 12px;
+}
+
+.shot-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 600px;
+}
+
+@media (min-width: 640px) {
+    .shot-pair {
+        gap: 32px;
+    }
+}
+
+.shot-pair .shot {
+    max-width: none;
+}
+
+.shot-single {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 880px) {
+    .shot-single {
+        justify-content: flex-start;
+    }
+}
+
+/* ---------- Two views ---------- */
+
+.views {
+    display: grid;
+    gap: 48px;
+}
+
+@media (min-width: 880px) {
+    .views {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+        gap: 64px;
+    }
+}
+
+.view-notes {
+    display: grid;
+    gap: 28px;
+    margin-top: 32px;
+}
+
+.view-notes h3 {
+    margin-bottom: 6px;
+}
+
+/* ---------- Reflection card ---------- */
+
+.reflection-card {
+    border: 1px solid var(--rule);
+    padding: clamp(20px, 5vw, 32px);
+    margin-top: 32px;
+}
+
+.reflection-card blockquote {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    line-height: 1.35;
+    margin-top: 16px;
+}
+
+.reflection-card .prompt {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.authors {
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: var(--ink-muted);
+}
+
+/* ---------- Reminders ---------- */
+
+.reminders {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+@media (min-width: 720px) {
+    .reminders {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+}
+
+.reminder {
+    border: 1px solid var(--rule);
+    padding: 20px;
+}
+
+.reminder .when {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reminder-mark {
+    width: 10px;
+    height: auto;
+    flex: none;
+}
+
+.reminder strong {
+    display: block;
+    font-weight: 500;
+    margin-top: 14px;
+}
+
+.reminder p {
+    color: var(--ink-muted);
+}
+
+/* ---------- Privacy ---------- */
+
+.nevers {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    margin-top: 28px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 0;
+}
+
+.nevers li {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.facts {
+    display: grid;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.facts h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+/* ---------- Install ---------- */
+
+.steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+    margin-top: 32px;
+    border-top: 1px solid var(--rule);
+}
+
+.steps li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 8px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.steps li::before {
+    content: counter(step, decimal-leading-zero);
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-variant-numeric: lining-nums;
+    color: var(--oxblood);
+}
+
+.steps strong {
+    font-weight: 500;
+}
+
+code {
+    font-family: ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size: 0.88em;
+    color: var(--ink-muted);
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+    border-top: 1px solid var(--rule);
+    margin-top: 32px;
+}
+
+.faq > div {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+@media (min-width: 880px) {
+    .faq > div {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+        gap: 48px;
+    }
+}
+
+.faq dt {
+    font-family: var(--serif);
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.faq dd {
+    color: var(--ink-muted);
+    margin-top: 8px;
+}
+
+@media (min-width: 880px) {
+    .faq dd {
+        margin-top: 2px;
+    }
+}
+
+.faq dd + dd {
+    margin-top: 12px;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    border-top: 1px solid var(--rule);
+    padding: 56px 0 48px;
+}
+
+.site-footer .wrap {
+    display: grid;
+    gap: 32px;
+}
+
+@media (min-width: 880px) {
+    .site-footer .wrap {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 64px;
+    }
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer-brand img {
+    width: 18px;
+}
+
+.footer-brand .wordmark {
+    font-size: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li + li {
+    margin-top: 8px;
+}
+
+.colophon {
+    border-top: 1px solid var(--rule);
+    padding-top: 20px;
+    grid-column: 1 / -1;
+}
+
+/* ---------- Why "memento mori" ---------- */
+
+/* Medium weight, a step larger and full ink: at regular weight and ~18px Cormorant's hairlines break up
+   under Windows font rendering on lower-density monitors. */
+.hero-gloss {
+    margin-top: 10px;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--ink);
+    max-width: 30rem;
+}
+
+.why-body {
+    margin-top: 40px;
+}
+
+.epigraph {
+    border-left: 1px solid var(--oxblood);
+    padding: 4px 0 4px 20px;
+}
+
+.epigraph blockquote {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    line-height: 1.45;
+    color: var(--ink);
+}
+
+.epigraph figcaption {
+    margin-top: 10px;
+}
+
+.not-panel {
+    border: 1px solid var(--rule);
+    padding: clamp(20px, 5vw, 32px);
+}
+
+.not-list > div {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+}
+
+.not-list > div:first-child {
+    padding-top: 12px;
+}
+
+.not-list dt {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.not-list dd {
+    margin-top: 4px;
+    color: var(--ink-muted);
+    font-size: 16px;
+}
+
+.not-closing {
+    margin-top: 20px;
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+@media (min-width: 880px) {
+    .not-panel {
+        position: sticky;
+        top: 24px;
+    }
+}

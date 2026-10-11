@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Memento Mori: uma vida, mês a mês</title>
+        <meta
+            name="description"
+            content="Um registro dos seus meses, guardados um a um. Sua vida como uma grade de meses, no Android: marque cada um uma vez, guarde o que o tornou digno de lembrança e leia uma breve reflexão a cada semana. Sem conta, sem anúncios; nada sai do seu celular." />
+        <meta name="author" content="Gabriel Santana" />
+        <meta name="theme-color" content="#F5F1E8" />
+        <meta name="color-scheme" content="light" />
+
+        <!--
+        PLACEHOLDER (URLs absolutas): os cartões do Open Graph e do Twitter precisam de links absolutos.
+        Troque https://gabrielsanttana.github.io/mementomori/ pelo endereço real do GitHub Pages quando
+        o repositório do portfólio for publicado. O restante da página usa caminhos relativos.
+    -->
+        <link rel="canonical" href="https://gabrielsanttana.github.io/mementomori/pt-br/" />
+        <link rel="alternate" hreflang="en" href="https://gabrielsanttana.github.io/mementomori/" />
+        <link rel="alternate" hreflang="pt-BR" href="https://gabrielsanttana.github.io/mementomori/pt-br/" />
+        <link rel="alternate" hreflang="x-default" href="https://gabrielsanttana.github.io/mementomori/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:locale:alternate" content="en_US" />
+        <meta property="og:site_name" content="Memento Mori" />
+        <meta property="og:title" content="Memento Mori: uma vida, mês a mês" />
+        <meta
+            property="og:description"
+            content="Um registro dos seus meses, guardados um a um. Marque cada mês uma vez. Guarde o que o tornou digno de lembrança." />
+        <meta property="og:url" content="https://gabrielsanttana.github.io/mementomori/pt-br/" />
+        <meta property="og:image" content="https://gabrielsanttana.github.io/mementomori/assets/og-card-pt-br.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="O nome Memento Mori e a ampulheta de meses ao lado de uma vida desenhada como uma grade de meses." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Memento Mori: uma vida, mês a mês" />
+        <meta
+            name="twitter:description"
+            content="Um registro dos seus meses, guardados um a um. Marque cada mês uma vez. Guarde o que o tornou digno de lembrança." />
+        <meta name="twitter:image" content="https://gabrielsanttana.github.io/mementomori/assets/og-card-pt-br.png" />
+
+        <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32" />
+        <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:wght@400;500&display=swap" />
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <a class="skip-link label" href="#main">Pular para a página</a>
+
+        <header class="site-header">
+            <div class="wrap">
+                <a class="wordmark" href="./">Memento Mori</a>
+                <nav class="label" aria-label="Seções">
+                    <a class="nav-optional" href="#por-que">Por quê</a>
+                    <a class="nav-optional" href="#reflexao">Reflexão</a>
+                    <a class="nav-optional" href="#privacidade">Privacidade</a>
+                    <a class="is-accent" href="#instalar">Instalar</a>
+                </nav>
+                <nav class="lang-switch label" aria-label="Idioma">
+                    <a href="../" lang="en" hreflang="en" title="English">EN</a>
+                    <a href="./" lang="pt-BR" hreflang="pt-BR" aria-current="page">PT</a>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <!-- ============================== Abertura ============================== -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="wrap split">
+                    <div>
+                        <img class="hero-mark" src="../assets/logo-mark.svg" width="40" height="68" alt="" />
+                        <p class="wordmark">Memento Mori</p>
+                        <p class="hero-gloss">
+                            <i>memento mori</i>: um antigo lembrete de que o tempo é finito, para que o presente ganhe
+                            foco.
+                        </p>
+                        <h1 class="display" id="hero-title">Uma vida, mês a mês.</h1>
+                        <p class="lead">
+                            Um registro dos seus meses, guardados um a um. Marque cada mês uma vez. Guarde o que o
+                            tornou digno de lembrança.
+                        </p>
+
+                        <div class="hero-actions">
+                            <!--
+                            PLACEHOLDER URL: o download do APK. O código do app é privado, então este link
+                            precisa apontar para a página de Releases do repositório público que hospeda o APK.
+                        -->
+                            <a class="button" href="https://github.com/gabrielsanttana/mementomori/releases/latest"
+                                >Baixar a prévia (APK)</a
+                            >
+                            <p class="caption hero-note">
+                                Para Android 7.0 ou mais recente. Gratuito e sem conta. Em breve no Google Play; a
+                                prévia se instala ao lado dele, e o seu registro pode ir junto.
+                            </p>
+                        </div>
+                    </div>
+
+                    <figure class="hero-figure">
+                        <img
+                            src="../assets/hero-grid.svg"
+                            width="515"
+                            height="387"
+                            alt="Uma vida de noventa anos desenhada como 1.080 quadradinhos, doze por linha. Os primeiros trinta e seis anos estão preenchidos em verde-sálvia, alguns meses ficaram em branco, um quadrado vinho marca o presente e os demais estão apenas contornados." />
+                        <figcaption class="label">Noventa anos, 1.080 meses. Um registro fictício.</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <!-- ============================== Por que "memento mori" ============================== -->
+            <section id="por-que" aria-labelledby="why-title">
+                <div class="wrap">
+                    <div class="text">
+                        <p class="label section-label">I · Por que “memento mori”</p>
+                        <h2 class="headline" id="why-title">Um antigo lembrete, guardado para os vivos.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            <i>Memento mori</i> quer dizer, em latim, “lembre-se de que você vai morrer”. Pode soar
+                            sombria à primeira vista, mas nunca foi feita para assustar. Era um jeito de trazer foco ao
+                            presente momento. A ideia é mais antiga que a expressão: Sócrates, no <i>Fédon</i> de
+                            Platão, chamou a filosofia de uma preparação para a morte, e os estoicos depois dele fizeram
+                            dela um exercício diário.
+                        </p>
+                    </div>
+
+                    <div class="split why-body">
+                        <div class="text stack">
+                            <p class="muted">
+                                Sêneca, nas cartas e em
+                                <i>Sobre a brevidade da vida</i>, defendeu que a vida é longa o bastante para quem sabe
+                                usá-la. Marco Aurélio voltou a esse pensamento muitas vezes no caderno que hoje chamamos
+                                de <i>Meditações</i>. Epicteto o ensinava aos alunos sem rodeios:
+                            </p>
+
+                            <figure class="epigraph">
+                                <blockquote>
+                                    “Tenha diante dos olhos, todos os dias, a morte, o exílio e tudo o mais que parece
+                                    terrível, mas sobretudo a morte: assim você jamais pensará em nada mesquinho, nem
+                                    desejará coisa alguma em excesso.”
+                                </blockquote>
+                                <figcaption class="caption">
+                                    Epicteto · Manual, 21 · Tradução nossa, a partir da versão inglesa de George Long,
+                                    1877
+                                </figcaption>
+                            </figure>
+
+                            <p class="muted">
+                                O mesmo pensamento seguiu vivo na contemplação cristã, em que o “Ensina-nos a contar os
+                                nossos dias” do salmo era lido como um chamado a viver bem o tempo recebido, e nas
+                                naturezas-mortas de <i>vanitas</i> do século XVII, que punham uma ampulheta ou uma flor
+                                cortada ao lado das coisas boas da mesa. Montaigne deu a um ensaio o título
+                                <i>Que filosofar é aprender a morrer</i>, e desejava que a morte o encontrasse
+                                “plantando as minhas couves”.
+                            </p>
+
+                            <p class="title">
+                                Em tudo isso, o sentido é o mesmo: lembrar que o tempo acaba é um modo de dar valor a
+                                ele, não de temê-lo.
+                            </p>
+
+                            <h3 class="label" style="padding-top: 16px">Uma vida numa página</h3>
+                            <p class="muted">
+                                Contada em dias, uma vida passa de trinta mil. Contada em meses, noventa anos são 1.080
+                                quadrados: poucos o bastante para caber numa só tela e ser vistos por inteiro.
+                                Calendários da vida como “Your Life in Weeks”, de Tim Urban (Wait But Why, 2014),
+                                mostraram quanto essa única imagem pode dizer. O Memento Mori a desenha em meses, para
+                                que cada quadrado seja grande o suficiente para guardar alguma coisa: uma marca e
+                                algumas palavras sobre o que tornou aquele mês digno de lembrança. Como o próprio mês,
+                                cada uma é escrita uma única vez.
+                            </p>
+
+                            <p class="caption">
+                                Salmo 90:12 na tradução de João Ferreira de Almeida, Edição Revista e Corrigida, 1904.
+                                Montaigne em tradução nossa.
+                            </p>
+
+                            <!--
+                            OPCIONAL, para Gabriel: uma ou duas frases suas sobre por que você fez este app.
+                            Pode deixar de fora. Por exemplo:
+                            <p class="muted">…</p>
+                        --></div>
+
+                        <aside class="not-panel" aria-labelledby="not-title">
+                            <h3 class="label" id="not-title">O que ele não é</h3>
+                            <dl class="not-list">
+                                <div>
+                                    <dt>Não é uma contagem regressiva.</dt>
+                                    <dd>
+                                        Nada faz tique-taque, e nada é previsto. A grade simplesmente termina na
+                                        extensão que você escolher.
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>Não é um rastreador de hábitos.</dt>
+                                    <dd>
+                                        Sem sequências, sem pontos, sem metas a cumprir. Cada mês pede uma marca, uma
+                                        vez.
+                                    </dd>
+                                </div>
+                                <div>
+                                    <dt>Não se apoia na culpa.</dt>
+                                    <dd>
+                                        Um mês em branco é só um mês em branco. Ninguém o cobra, e ele continua aberto
+                                        para quando você quiser voltar.
+                                    </dd>
+                                </div>
+                            </dl>
+                            <p class="not-closing">
+                                É um jeito tranquilo de perceber o tempo que lhe é dado e de guardar o que tornou cada
+                                mês digno de lembrança.
+                            </p>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== A grade ============================== -->
+            <section id="grade" aria-labelledby="grid-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">II · A grade</p>
+                        <h2 class="headline" id="grid-title">Sua vida, desenhada em meses.</h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                Uma linha para cada ano, doze quadrados por linha. A grade começa no seu nascimento e
+                                termina na extensão que você escolher: noventa anos, a menos que você defina outra.
+                            </p>
+                            <p class="muted">
+                                Cada quadrado é um mês da sua vida. Um deles é sempre o mês que você está vivendo agora.
+                            </p>
+                        </div>
+                    </div>
+
+                    <dl class="legend" aria-label="O que os quadrados significam">
+                        <div>
+                            <dt class="label">
+                                <span class="swatch swatch--remembered" aria-hidden="true"></span>Lembrado
+                            </dt>
+                            <dd>
+                                Um mês que você marcou, com ou sem nota. Os meses anteriores ao início do seu registro
+                                são preenchidos quando você o abre.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="label">
+                                <span class="swatch swatch--missed" aria-hidden="true"></span>Em branco
+                            </dt>
+                            <dd>
+                                Um mês passado que ficou sem marca. Ele continua aberto; você pode voltar a ele quando
+                                quiser.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="label">
+                                <span class="swatch swatch--this-month" aria-hidden="true"></span>Este mês
+                            </dt>
+                            <dd>O mês em que você está, à espera de ser marcado.</dd>
+                        </div>
+                        <div>
+                            <dt class="label"><span class="swatch swatch--future" aria-hidden="true"></span>Futuro</dt>
+                            <dd>Os meses que ainda virão. Não fazem nada ao toque.</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+
+            <!-- ============================== Marcar um mês ============================== -->
+            <section id="marcar" aria-labelledby="marking-title">
+                <div class="wrap split split--figure-first">
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/month-check-in.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da tela de marcar outubro de 2026: o que tornou este mês digno de lembrança, uma nota curta sobre linhas pautadas e o botão para marcar o mês." />
+                            </div>
+                            <figcaption class="label">Marcando este mês</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="text">
+                        <p class="label section-label">III · Marcar um mês</p>
+                        <h2 class="headline" id="marking-title">Uma vez por mês, uma marca.</h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                Abra o quadrado do mês em que você está e responda a uma única pergunta: o que tornou
+                                este mês digno de lembrança?
+                            </p>
+                            <p class="muted">
+                                Guarde uma nota curta ou marque o mês sem ela. A nota é opcional. O mês, não.
+                            </p>
+                            <h3 class="title" style="padding-top: 12px">Escrito uma só vez, a tinta.</h3>
+                            <p class="muted">
+                                Um mês marcado não pode ser editado depois, e é essa a intenção. Marcar pede cuidado:
+                                você faz uma pausa, escolhe pelo que este mês deve ser lembrado e escreve uma vez, como
+                                um lançamento feito a tinta num livro. Saber que não existe rascunho é o que dá peso a
+                                essas poucas palavras.
+                            </p>
+                            <p class="muted">
+                                O que fica é o que você escolheu guardar naquele momento, não uma versão polida depois.
+                                Toque no quadrado quando quiser para lê-lo de novo, exatamente como você escreveu.
+                            </p>
+                            <p class="title">Uma vez marcado, marcado para sempre.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Duas vistas ============================== -->
+            <section id="vistas" aria-labelledby="views-title">
+                <div class="wrap views">
+                    <div class="text">
+                        <p class="label section-label">IV · Duas vistas</p>
+                        <h2 class="headline" id="views-title">Ano a ano, ou tudo de uma vez.</h2>
+                        <div class="view-notes">
+                            <div>
+                                <h3 class="label">Anos</h3>
+                                <p class="muted">
+                                    O quadro abre nos seus anos, uma linha de cada vez, com o ano atual à vista e uma
+                                    contagem discreta embaixo: lembrados, em branco, ainda pela frente.
+                                </p>
+                            </div>
+                            <div>
+                                <h3 class="label">Vida inteira</h3>
+                                <p class="muted">
+                                    Todos os anos numa só tela, sem rolar, sob uma única linha que diz onde você está,
+                                    como “Ano 39 de 90”. Faça o gesto de pinça na vista de anos para chegar lá e toque
+                                    num ano para abri-lo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="shot-pair">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/years.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da vista de anos para um registro fictício: o título, a chave Anos e Vida inteira, a legenda e linhas de doze meses, uma para cada ano." />
+                            </div>
+                            <figcaption class="label">Anos</figcaption>
+                        </figure>
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/whole-life.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da vista da vida inteira para um registro fictício: ano 39 de 90 e todos os noventa anos numa só tela, em duas colunas." />
+                            </div>
+                            <figcaption class="label">Vida inteira</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== A reflexão da semana ============================== -->
+            <section id="reflexao" aria-labelledby="reflection-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">V · A reflexão da semana</p>
+                        <h2 class="headline" id="reflection-title">Alguns minutos para o que dá sentido aos meses.</h2>
+                        <div class="stack" style="margin-top: 24px">
+                            <p class="lead">
+                                Cinquenta e três textos curtos, um para cada semana do ano, sobre o tempo, a atenção e a
+                                gratidão. Cada um parte de uma passagem, traz uma citação em destaque e termina com uma
+                                pergunta para levar pela semana.
+                            </p>
+                            <p class="authors">
+                                Sêneca, Marco Aurélio, Epicteto, Montaigne, Emerson, Thoreau, Whitman, Rilke, Tagore,
+                                Emily Dickinson, Tolstói e outros.
+                            </p>
+                            <p class="muted">As semanas passadas do ano ficam no acervo, em Reflexões.</p>
+                        </div>
+
+                        <article class="reflection-card" aria-label="Um exemplo de reflexão">
+                            <p class="label">Semana 2</p>
+                            <h3 class="title" style="margin-top: 8px">A única coisa que é nossa</h3>
+                            <blockquote>“Meu Lucílio, tudo mais é alheio; só o tempo é que é nosso.”</blockquote>
+                            <p class="caption" style="margin-top: 12px">
+                                Sêneca · Cartas a Lucílio, 1 · Tradução de António Feliciano de Castilho, 1871
+                            </p>
+                            <p class="prompt">
+                                O que tomou as suas horas ultimamente que você não escolheria dar de novo?
+                            </p>
+                        </article>
+                    </div>
+
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/reflection.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da reflexão da semana 2, A única coisa que é nossa, a partir da primeira carta de Sêneca a Lucílio." />
+                            </div>
+                            <figcaption class="label">Uma reflexão</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Lembretes ============================== -->
+            <section id="lembretes" aria-labelledby="reminders-title">
+                <div class="wrap">
+                    <div class="text">
+                        <p class="label section-label">VI · Lembretes</p>
+                        <h2 class="headline" id="reminders-title">Dois lembretes discretos, se você quiser.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            Se você permitir notificações, o semanal chega no dia e no horário que você escolher, e o
+                            mensal no último dia de cada mês, no horário que você escolher. Os dois são agendados no
+                            próprio celular, e os dois podem ser desligados em Ajustes.
+                        </p>
+                    </div>
+
+                    <div class="reminders">
+                        <div class="reminder">
+                            <p class="when label">
+                                <img
+                                    class="reminder-mark"
+                                    src="../assets/logo-mark.svg"
+                                    width="10"
+                                    height="17"
+                                    alt="" />Toda semana · seu dia, seu horário
+                            </p>
+                            <strong>A reflexão da semana</strong>
+                            <p>Alguns minutos para o que dá sentido aos meses.</p>
+                        </div>
+                        <div class="reminder">
+                            <p class="when label">
+                                <img
+                                    class="reminder-mark"
+                                    src="../assets/logo-mark.svg"
+                                    width="10"
+                                    height="17"
+                                    alt="" />Todo mês · o último dia, seu horário
+                            </p>
+                            <strong>Um mês para lembrar</strong>
+                            <p>Marque o que o tornou digno de lembrança.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Privacidade ============================== -->
+            <section id="privacidade" aria-labelledby="privacy-title">
+                <div class="wrap split split--figure-first">
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/settings.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da tela O registro, em Ajustes: nome, data de nascimento, extensão da grade e o ritual da reflexão, com os lembretes e seus horários." />
+                            </div>
+                            <figcaption class="label">O registro, em Ajustes</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="text">
+                        <p class="label section-label">VII · Privado por princípio</p>
+                        <h2 class="headline" id="privacy-title">Este registro é seu.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            Ele fica no seu celular, e o app nunca o envia a lugar nenhum. Não existe servidor para onde
+                            enviá-lo.
+                        </p>
+
+                        <ul class="nevers" aria-label="O que o app não tem">
+                            <li>Sem conta</li>
+                            <li>Sem login</li>
+                            <li>Sem sincronização</li>
+                            <li>Sem rastreamento</li>
+                            <li>Sem anúncios</li>
+                        </ul>
+
+                        <div class="facts">
+                            <div>
+                                <h3>Um celular novo</h3>
+                                <p class="muted">
+                                    Seu registro faz parte do próprio backup do Android, então configurar um celular
+                                    novo a partir desse backup leva os seus meses junto.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Uma cópia só sua</h3>
+                                <p class="muted">
+                                    Exportar meu acervo gera um arquivo simples com todos os meses e notas. Guarde-o
+                                    onde quiser e use Restaurar de um arquivo para trazê-lo de volta.
+                                </p>
+                            </div>
+                            <div>
+                                <h3>Apagado quando você quiser</h3>
+                                <p class="muted">
+                                    Apagar este aparelho remove todos os meses e todas as notas de uma vez. Desinstalar
+                                    o app também os remove.
+                                </p>
+                            </div>
+                        </div>
+
+                        <p class="caption" style="margin-top: 28px">
+                            A
+                            <a
+                                href="https://gist.github.com/gabrielsanttana/80c33d4d604d0b20329192adfdc450f5#file-memento-mori-privacy-policy-pt-br-md"
+                                >política de privacidade</a
+                            >
+                            completa é curta e diz o mesmo.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Instalar ============================== -->
+            <section id="instalar" aria-labelledby="install-title">
+                <div class="wrap split">
+                    <div class="text">
+                        <p class="label section-label">VIII · Instalar a prévia</p>
+                        <h2 class="headline" id="install-title">Até chegar ao Google Play.</h2>
+                        <p class="lead" style="margin-top: 24px">
+                            O Memento Mori está a caminho do Google Play. Enquanto isso, uma versão prévia é distribuída
+                            como arquivo APK. Ela precisa do Android 7.0 ou mais recente.
+                        </p>
+
+                        <ol class="steps">
+                            <li>
+                                <div>
+                                    No seu celular Android, abra a
+                                    <a href="https://github.com/gabrielsanttana/mementomori/releases/latest"
+                                        >versão mais recente</a
+                                    >
+                                    e baixe o arquivo terminado em <code>.apk</code>.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Abra o arquivo baixado. O Android vai pedir permissão para instalar apps desta
+                                    fonte: ative <strong>Permitir desta fonte</strong> para o navegador ou o gerenciador
+                                    de arquivos e volte. Se o aviso não aparecer, procure em Configurações › Apps ›
+                                    Acesso especial a apps › <strong>Instalar apps desconhecidos</strong>.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Toque em <strong>Instalar</strong>. O Google Play Protect pode pedir que você
+                                    confirme um app que ele ainda não conhece.
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    Abra o <strong>Memento Mori Preview</strong>, escolha <strong>Português</strong> na
+                                    tela de idioma, informe seu nome e sua data de nascimento e comece. A data de
+                                    nascimento é definida uma vez e não pode ser alterada depois.
+                                </div>
+                            </li>
+                        </ol>
+
+                        <p class="caption" style="margin-top: 20px">
+                            A prévia é um app à parte (<code>com.gabriel.mementomori.preview</code>), então pode ficar
+                            ao lado da versão do Google Play quando ela chegar. O idioma pode ser mudado depois em
+                            Ajustes.
+                        </p>
+                    </div>
+
+                    <div class="shot-single">
+                        <figure class="shot">
+                            <div class="shot-frame">
+                                <img
+                                    src="../assets/screenshots/pt-br/welcome.png"
+                                    width="1080"
+                                    height="2340"
+                                    loading="lazy"
+                                    alt="Simulação da tela de boas-vindas: a ampulheta, o nome Memento Mori, “Uma vida, mês a mês.” e o botão Começar." />
+                            </div>
+                            <figcaption class="label">A primeira tela</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================== Perguntas ============================== -->
+            <section id="perguntas" aria-labelledby="questions-title">
+                <div class="wrap">
+                    <p class="label section-label">IX · Perguntas</p>
+                    <h2 class="headline" id="questions-title">O que já nos perguntaram.</h2>
+
+                    <dl class="faq">
+                        <div>
+                            <dt>Existe versão para iPhone?</dt>
+                            <dd>Ainda não. A primeira versão é só para Android.</dd>
+                        </div>
+                        <div>
+                            <dt>Onde fica guardado o meu registro?</dt>
+                            <dd>
+                                Somente no seu celular, num banco de dados local: seu nome, sua data de nascimento, a
+                                extensão da grade, suas escolhas de lembrete e cada mês que você marca, com a sua nota.
+                                Nada é coletado, vendido, compartilhado ou analisado.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>O que acontece quando eu troco de celular?</dt>
+                            <dd>
+                                Se o backup do celular estiver ativado, configurar o aparelho novo a partir dele traz os
+                                seus meses junto. Para fazer a mudança à mão, use Exportar meu acervo em Ajustes e
+                                depois Restaurar de um arquivo na tela de boas-vindas do celular novo.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Como passo da prévia para a versão do Google Play?</dt>
+                            <dd>
+                                São apps separados e podem ficar instalados lado a lado. Na prévia, use Exportar meu
+                                acervo. Instale o Memento Mori pelo Google Play e escolha Restaurar de um arquivo.
+                                Quando os seus meses estiverem lá, a prévia pode ser desinstalada.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>Posso mudar um mês depois de marcá-lo?</dt>
+                            <dd>
+                                Não, e de propósito. Um mês é marcado uma única vez, como um registro escrito a tinta: o
+                                que fica é o que você escolheu lembrar naquele momento. Você pode abri-lo quando quiser
+                                e lê-lo exatamente como escreveu.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>E se eu esquecer um mês?</dt>
+                            <dd>
+                                Ele fica em branco e continua aberto. Você pode voltar e marcá-lo quando quiser; nunca é
+                                tarde para lembrar.
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>O app está em português?</dt>
+                            <dd>
+                                Sim. Ele fala português e inglês: o idioma é escolhido na primeira abertura e pode ser
+                                mudado depois em Ajustes. As reflexões também têm edição em português.
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <div class="stack-tight">
+                    <div class="footer-brand">
+                        <img src="../assets/logo-mark.svg" width="18" height="31" alt="" />
+                        <span class="wordmark">Memento Mori</span>
+                    </div>
+                    <p class="caption">Desde o momento presente.</p>
+                </div>
+
+                <ul class="footer-links">
+                    <li>
+                        <a
+                            href="https://gist.github.com/gabrielsanttana/80c33d4d604d0b20329192adfdc450f5#file-memento-mori-privacy-policy-pt-br-md"
+                            >Política de privacidade</a
+                        >
+                    </li>
+                    <li><a href="mailto:santana.sw.solutions@gmail.com">santana.sw.solutions@gmail.com</a></li>
+                    <li>
+                        <a href="https://github.com/gabrielsanttana/mementomori/releases/latest">Versões de prévia</a>
+                    </li>
+                </ul>
+
+                <p class="caption colophon">
+                    Um projeto pessoal de Gabriel Santana. Feito com Expo e React Native em TypeScript, com SQLite via
+                    Drizzle; tudo roda no celular.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
